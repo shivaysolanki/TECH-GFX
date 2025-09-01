@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech GFX - Graphic Design Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+        
+        .navigation {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        @media (max-width: 768px) {
+            .navigation {
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navigation fixed w-full z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-gray-800">Tech GFX</div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+                    <a href="#services" class="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
+                    <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Creative Graphic Design Studio</h1>
+                    <p class="text-xl mb-8 opacity-90">4+ years of freelance experience creating stunning visuals that captivate and convert</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-purple-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                            Hire Me
+                        </a>
+                        <a href="#portfolio" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-700 transition-colors">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-white opacity-20 rounded-2xl transform rotate-3"></div>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e27c3832-2013-40d8-9ae8-49ec23446a98.png" alt="Creative designer workspace with multiple monitors showing graphic design projects, digital tablets, and design software interfaces" class="relative rounded-2xl shadow-2xl" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Design Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive graphic design solutions with 4 years of freelance expertise</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="service-icon w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-clone text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Poster Design</h3>
+                    <p class="text-gray-600">Professional poster designs for events, concerts, promotions, and marketing campaigns. I create eye-catching visuals with perfect typography, color schemes, and layout that effectively communicate your message and grab attention.</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">From $50</span>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="service-icon w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-flag text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Banner Design</h3>
+                    <p class="text-gray-600">Custom banner designs for websites, social media, events, and print materials. I specialize in creating responsive banners that look great on all devices and platforms, with clear call-to-actions and engaging visuals.</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">From $40</span>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="service-icon w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-desktop text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Web Loading Pages</h3>
+                    <p class="text-gray-600">Creative and engaging loading screens and landing pages that keep users interested while content loads. I design interactive loading animations, progress indicators, and engaging visuals that enhance user experience.</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">From $60</span>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="service-icon w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-pen-nib text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Logo Design</h3>
+                    <p class="text-gray-600">Memorable logo designs that capture your brand identity. I create unique, scalable logos with multiple variations, color schemes, and file formats. Includes brand guidelines for consistent usage across all platforms.</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">From $80</span>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="service-icon w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Social Media Graphics</h3>
+                    <p class="text-gray-600">Complete social media packages including posts, stories, covers, and ads. I create cohesive visual content that boosts engagement, maintains brand consistency, and drives traffic across all social platforms.</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">From $30/post</span>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="service-icon w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">UI/UX Design</h3>
+                    <p class="text-gray-600">User-friendly interface designs that combine aesthetic appeal with excellent user experience. I create intuitive layouts, wireframes, prototypes, and mockups that enhance usability and visual appeal.</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">From $100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">My Creative Work</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Showcase of diverse design projects from 4 years of freelance experience</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden card-hover">
+                    <div class="portfolio-image">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/62aeb196-0478-47cb-b508-c5e160577a1f.png" alt="Modern event poster design with bold typography, vibrant colors, and creative layout" class="w-full h-48 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Music Festival Poster</h3>
+                        <p class="text-gray-600 mb-4">Vibrant poster design for outdoor music event with dynamic typography</p>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Poster Design</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden card-hover">
+                    <div class="portfolio-image">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d653b73a-5a8f-4360-af84-0d9a17b3f9a8.png" alt="Professional website banner with clean design, call-to-action buttons, and modern aesthetics" class="w-full h-48 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-commerce Banner</h3>
+                        <p class="text-gray-600 mb-4">Website header banner for online store with promotional messaging</p>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Banner Design</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden card-hover">
+                    <div class="portfolio-image">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/60141ea1-6aac-4245-b6a1-4d907a4adec5.png" alt="Creative web loading page animation with smooth transitions and engaging visuals" class="w-full h-48 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Loading Page Design</h3>
+                        <p class="text-gray-600 mb-4">Animated loading screen for web application with progress indicators</p>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Web Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6165d2dc-ff7a-4197-93c9-eb9d3e6bb0db.png" alt="Freelance graphic designer working on digital projects with creative tools and design software" class="rounded-2xl shadow-xl" />
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Me</h2>
+                    <p class="text-gray-600 mb-4 text-lg">
+                        Hi, I'm Shivay Solanki, the creative force behind Tech GFX. With over 4 years of experience as a freelance graphic designer, I've developed a passion for transforming ideas into compelling visual experiences.
+                    </p>
+                    <p class="text-gray-600 mb-4 text-lg">
+                        My journey in design began with a fascination for how visuals can communicate complex ideas simply and effectively. Over the years, I've honed my skills in various design disciplines, specializing in poster design, banner creation, web loading pages, and comprehensive branding solutions.
+                    </p>
+                    <p class="text-gray-600 mb-4 text-lg">
+                        What sets me apart is my commitment to understanding each client's unique vision and delivering designs that not only look stunning but also achieve their business objectives. I believe in clean, functional design that makes an impact.
+                    </p>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        When I'm not designing, you can find me exploring new design trends, experimenting with different creative tools, and continuously learning to stay at the forefront of the ever-evolving design industry.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <div class="text-3xl font-bold text-purple-600 mb-2">4+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-purple-600 mb-2">150+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-purple-600 mb-2">98%</div>
+                            <div class="text-gray-600">Client Satisfaction</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                            <div class="text-gray-600">Happy Clients</div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors">
+                            Hire Me
+                        </a>
+                        <a href="mailto:shivaysolanki83@gmail.com" class="border border-purple-600 text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition-colors">
+                            Email Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Work Together</h2>
+                <p class="text-xl opacity-90 max-w-2xl mx-auto">Ready to bring your ideas to life? Get in touch for a free consultation and quote.</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-2xl mb-4">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Email Me Directly</h3>
+                    <a href="mailto:shivaysolanki83@gmail.com" class="text-xl opacity-90 hover:underline">shivaysolanki83@gmail.com</a>
+                </div>
+                
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block mb-2">Name</label>
+                            <input type="text" class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg px-4 py-3 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="Your name" required>
+                        </div>
+                        <div>
+                            <label class="block mb-2">Email</label>
+                            <input type="email" class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg px-4 py-3 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block mb-2">Project Type</label>
+                        <select class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" required>
+                            <option value="">Select service</option>
+                            <option value="poster">Poster Design</option>
+                            <option value="banner">Banner Design</option>
+                            <option value="loading">Web Loading Page</option>
+                            <option value="logo">Logo Design</option>
+                            <option value="social">Social Media Graphics</option>
+                            <option value="uiux">UI/UX Design</option>
+                            <option value="other">Other Design Service</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block mb-2">Project Details</label>
+                        <textarea class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg px-4 py-3 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 h-32" placeholder="Describe your project requirements, timeline, and budget..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-white text-purple-700 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">Tech GFX</div>
+                    <p class="text-gray-400 mb-4">Creative Graphic Design Studio</p>
+                    <p class="text-gray-400">4+ years of creative excellence</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Poster Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Banner Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Loading Pages</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Logo Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Connect With Me</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-gray-400"></i>
+                            <a href="mailto:shivaysolanki83@gmail.com" class="text-gray-400 hover:text-white transition-colors">shivaysolanki83@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-2 mt-4">
+                            <i class="fab fa-instagram text-gray-400"></i>
+                            <a href="https://instagram.com/shivay_gfx" target="_blank" class="text-gray-400 hover:text-white transition-colors">@shivay_gfx</a>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://instagram.com/shivay_gfx" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 Tech GFX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle (basic functionality)
+        document.querySelector('.md\\:hidden button').addEventListener('click', function() {
+            alert('Mobile menu would open here. This is a basic implementation.');
+        });
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you within 24 hours.');
+            this.reset();
+        });
+
+        // Email click tracking
+        document.querySelectorAll('a[href^="mailto:"]').forEach(emailLink => {
+            emailLink.addEventListener('click', function() {
+                alert('Opening email client to contact shivaysolanki83@gmail.com');
+            });
+        });
+
+        // Instagram link tracking
+        document.querySelectorAll('a[href*="instagram.com"]').forEach(igLink => {
+            igLink.addEventListener('click', function() {
+                alert('Opening Instagram profile: @shivay_gfx');
+            });
+        });
+    </script>
+</body>
+</html>
